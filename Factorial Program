@@ -1,0 +1,23 @@
+/*
+Name: Sod
+Date: 10/18/2023
+Description: Factorial
+ */
+import java.util.*; //Import scanner class
+public class Main {
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+    System.out.println("Please enter the number you want a factorial of");
+    int num = input.nextInt(); //Get user input
+    System.out.println("The factorial of the number: " + num + " is " + factorial(num)); //Print statement would print both user number and factorial amount
+    }
+    //Create method for factorial
+    public static int factorial (int x)
+    {
+        if (x == 0) //The factorial of 0 would be 1
+            return 1;
+        else //For every number greater than 0 
+        return x * factorial(x-1); //Will multiply the number by the number - 1 and will return that value
+    }
+}
