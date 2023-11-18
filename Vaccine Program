@@ -1,0 +1,76 @@
+/*
+Name: Sod
+Date: 10/17/2023
+Description: Test 2 Part B
+ */
+
+import java.util.*; // Import Package containing  Scanner
+public class Main {
+    static Scanner input = new Scanner(System.in); // Make scanner object
+
+    public static void main(String[] args)
+    {
+        //Declare variables
+
+        String fname;
+        String lname;
+        int age;
+        int zip;
+
+    System.out.println("Hello, would you like to use our application?");
+    System.out.println("Please type in Yes or No");
+    String choice = input.nextLine();
+
+    if ("Yes".compareToIgnoreCase(choice) == 0)
+    {
+        System.out.println("Please type in your first name.");
+        fname = input.nextLine();
+        System.out.println("Pleae type in your last name.");
+        lname = input.nextLine();
+        System.out.println("Please type in your age.");
+        age = input.nextInt();
+        System.out.println("Please type in your zipcode.");
+        zip = input.nextInt();
+        input.nextLine();
+        System.out.println("You have entered the following information:");
+        System.out.println("First Name: " + fname + "\nLast Name: " + lname +
+                "\nAge: " + age + "\nZipcode: " +zip);
+        System.out.println("Is this correct?");
+        String choice2 = input.nextLine();
+            if(choice2.compareToIgnoreCase("Yes") == 0)
+            {
+              System.out.println("Great!");
+              System.out.println("Menu \nPlease select the vaccine you would like by inputting the number associated with it.");
+              System.out.println("1 - Pfizer-BioNTech\n" +
+                      "2 - Moderna\n" +
+                      "3 - Johnson & Johnson's\n" +
+                      "4 - Other ");
+              int choice3 = input.nextInt();
+              switch(choice3)
+              {
+                  case 1:
+                      System.out.println("You have been vaccinated with the Pfizer-BioNTec vaccine and qualify for a booster shot!");
+                      break;
+                  case 2:
+                      System.out.println("You have been vaccinated with the Moderna vaccine and qualify for a booster shot!");
+                      break;
+                  case 3:
+                      System.out.println("You have been vaccinated with the Johnson & Johnson's vaccine and qualify for a booster shot!");
+                      break;
+                  case 4:
+                      System.out.println("You have been vaccinated with a vaccine other than the Pfizer-BioNTech  Moderna  Johnson & Johnson's and may NOT qualify for a booster shot! ");
+                      break;
+                  default:
+                      System.out.println("Invalid choice.");
+              }
+            }
+            else
+                System.out.println("Please try again and enter the correct information");
+
+    }
+    else
+        System.out.println("You chose no, goodbye and thank you for using our program");
+
+
+    }
+}
