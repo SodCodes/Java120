@@ -1,0 +1,53 @@
+/*
+Name: Sod
+Date: 10/4/2023
+Description: Reading Multiple Lines of a File
+ */
+//Step 1 Import Packages
+import java.util.*;
+import java.io.*;
+
+public class Main {
+
+    public static void main(String[] args)
+            throws FileNotFoundException //Not Handling that Expection
+    {
+      Scanner infile = new Scanner(new FileReader("C:\\CTEC120\\Customers.txt")); //Reading in data from file Customer.txt
+
+      PrintWriter outfile = new PrintWriter("C:\\CTEC120\\CustomersOutput.txt"); //Writing out data to text file CustomerOutput
+
+        //Declare variables
+        String firstname;
+        String lastname;
+        int age;
+        int salary;
+        String city;
+        int counter =0;
+        int sum = 0;
+
+        while(infile.hasNext())
+        {
+            firstname = infile.next();
+            lastname = infile.next();
+            age = infile.nextInt();
+            salary = infile.nextInt();
+            city = infile.next();
+
+
+
+            outfile.println("The first name in the file is: " + firstname);
+            outfile.println("The last name  in the file is: " + lastname);
+            outfile.println("The age in the file is: " + age);
+            outfile.println("The salary in the file is: " + salary);
+            outfile.println("The city in the file is: " + city);
+
+            sum = sum + salary;
+            counter++;
+
+
+        }
+        outfile.println("The average sum of all the salaries are: $" +sum);
+        infile. close();
+        outfile.close();
+    }
+}
