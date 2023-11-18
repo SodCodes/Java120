@@ -1,0 +1,64 @@
+/*
+Name: Sod
+Date: 10/21/2023
+Description: Final Part B
+*/
+import java.util.*; //Import package
+public class Main {
+    static Scanner input = new Scanner(System.in);
+    public static void WelcomeMessage() //Create welcome message
+    {
+        System.out.println("""
+                Welcome to Sod's French Number Program
+                This program will show the french word associated with numbers from 11 to 20
+                The number of your choice will be displayed t1q1zso 20 in French""");
+    }
+    public static void GoodbyeMessage() //Create void goodbye message
+    {
+        System.out.println("Goodbye, thank you for using my program!");
+    }
+    public static String frenchNumbers (int word)
+    {
+        switch (word) {
+            case (11):
+                return "onze";
+            case (12):
+                return "douze";
+            case (13):
+                return "treize";
+            case (14):
+                return "quatorze";
+            case (15):
+                return "quinze";
+            case (16):
+                return "seize";
+            case (17):
+                return "diz-sept";
+            case (18):
+                return "dix-huit";
+            case (19):
+                return "dix-neuf";
+            case (20):
+                return "vingt";
+            default:
+                return "Invalid Choice";
+        }
+ 
+    }
+    public static void main(String[] args)
+    {
+        WelcomeMessage();
+        System.out.println("Please enter a number from 11-20");
+        int num = input.nextInt();
+        while (num <= 20 && num >= 11)
+        {
+            System.out.println(num + " " + frenchNumbers(num));
+            num ++;
+        }
+        GoodbyeMessage();
+    }
+}
+
+	
+
+
