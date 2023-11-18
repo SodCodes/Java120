@@ -1,0 +1,31 @@
+/* 
+Name: Sod
+Date: 10/6/2023
+Description: Password 3x times & For Loop
+*/ 
+import java.util.*; //Must import Scanner class
+
+public class Main {
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+       int limit;
+       int i;
+       int number;
+
+       System.out.println("How many numbers will you want to enter?");
+       limit = input.nextInt();
+
+       for(i=0; i<limit; i++)
+        {
+            //Body of for loop
+            System.out.println("Enter a number to see if it's even or odd");
+            number = input.nextInt();
+            //Code to determine if number is even or odd
+            if(number % 2 ==1)
+                System.out.println("The  number: " + number + " is odd!");
+            else
+                System.out.println("The number: " + number + " is even!");
+        }
+    }
+}
