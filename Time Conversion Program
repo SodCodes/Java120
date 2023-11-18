@@ -1,0 +1,89 @@
+/*
+Name: Sod
+Date: 10/18/2023
+Description: Time Conversion
+ */
+import java.util.*; //Import Scanner Class
+public class Main {
+
+    //Make Methods 1st
+    public static int h2minutes(int x) //Method for hours to minutes
+    {
+        if (x <= 0) {
+            System.out.println("Invalid entry");
+            return x;
+        }
+        else
+            return x * 60;
+    }
+    public static int d2hours (int x)
+    {
+        if (x <= 0) {
+            System.out.println("Invalid entry");
+            return x;
+        }
+        else
+         return x * 24;
+    }
+    public static int m2hours (int x)
+    {
+        if (x <= 60) {
+            System.out.println("Invalid entry");
+            return x;
+        }
+        else
+            return x / 60;
+    }
+    public static int h2days (int x)
+    {
+        if (x <= 24) {
+            System.out.println("Invalid entry");
+            return x;
+        }
+        else
+            return x / 24;
+    }
+
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Welcome to Sod's Time Conversion Program");
+        System.out.println("Please choice a number");
+        System.out.println("""
+                1 - Hours to Minutes
+                2 - Days to Hours
+                3 - Minutes to Days
+                4 - Hours to Days""");
+        int choice = input.nextInt();
+        switch (choice)
+        {
+            case 1:
+                System.out.println("Please enter the number of hours");
+                int hours = input.nextInt();
+                System.out.println(hours + " hour(s) in minutes is: " + h2minutes(hours));
+                break;
+            case 2:
+                System.out.println("Please enter the number of days");
+                int days = input.nextInt();
+                System.out.println(days + " day(s) in hours is: " + d2hours(days));
+                break;
+            case 3:
+                System.out.println("Please enter the number of minute(s)");
+                int minutes = input.nextInt();
+                System.out.println(minutes + " minute(s) in hours is: " + m2hours(minutes));
+                break;
+            case 4:
+                System.out.println("Please enter the number of hours");
+                hours = input.nextInt(); //reusing the same variable so don't need to initalize it again
+                System.out.println(hours + " hour(s) in days is: " + h2days(hours));
+                break;
+            default:
+                System.out.println("Invalid Choice");
+        }
+        //Make a code where there is an number associated with the conversion the user wants
+        //Ask user how many hours, minutes or whatever they would like to convert
+        //Have case's with that int where they would run if the user choose that number
+        //Inside the body would be the selected
+
+    }
+}
