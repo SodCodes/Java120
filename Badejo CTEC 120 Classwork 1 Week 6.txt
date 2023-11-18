@@ -1,0 +1,38 @@
+/*
+Name: Sod 
+Date: 10/2/2023
+Description: Random Number Generator */
+import java.util.*;
+public class Main
+
+{
+	public static void main(String[] args) {
+	
+	Scanner input = new Scanner(System.in);
+	
+	int minVal;
+	int maxVal; 
+	int random;
+	int i =0; //This will be the control variable 
+	
+	System.out.println("How many random numbers woukd you like to be  made?");
+	
+	int reponse = input.nextInt();
+	
+	System.out.println("What is the lowest number you would like to be generated in your range?");
+	minVal = input.nextInt();
+	
+	System.out.println("What is the highest number you would like to be generated in your range?");
+	
+	maxVal = input.nextInt();
+	
+	while ( i < reponse) //i would be the control variable 
+	{
+	    random = minVal - (int)(Math.random() * (maxVal - minVal));
+	    System.out.println("Your random number between " + minVal + " & " + maxVal + " is: " +random);
+        i++; //Add +1 to control variable so the loop won't run forever
+	}
+	
+	
+	}
+}
